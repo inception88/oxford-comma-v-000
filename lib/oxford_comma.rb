@@ -2,7 +2,9 @@ def oxford_comma(array)
   if array.length < 3
     array.join(" and ")
   else
-    new_array = "and " + array.last
-    new_array.join(", ")
+    last_index = array.pop
+    last_index = "and " + last_index
+    array << last_index
+    array.join(", ")
   end
 end
